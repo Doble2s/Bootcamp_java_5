@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2.2</title>
+</head>
+<body>
+<div class="formulario">
+    <h3>formulario</h3>
+    <form name="infoUsuario"  method="post" action="/send/">
+        <fieldset>
+            <legent>informacion personal:</legent><br>
+            <label> Nombre:
+                <input type="text" required placeholder="Nombre"><br>
+            </label>
+            <label> apellido:
+                <input type="text" required placeholder="apellido"><br>
+            </label>
+            <label> cumpleaños:
+                <input type="date" required><br>
+            </label>
+            <label>Genero:
+                <select name="Genero" required>
+                    <option value="masculino">masculino</option>
+                    <option value="femenino">femenino</option>
+                    <option value="otro">otro</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>informacion contacto</legend>
+            <label> email:
+                <input type="input" placeholder="ejemplo@email.com" required><br>
+            </label>
+            <label> numero:
+                <input type="tel" placeholder="+34 123456789" pattern="+?[0-9]{7,11}" required><br>
+            </label>
+            <label> direccion:
+                <textarea></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>informacion cuenta:</legend>
+            <label> Nombre usuario:
+                <input type="text" required><br>
+            </label> 
+            <label> contraseña:
+                <input id="contrasenaUser" type="text" required pattern="^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*\d))(?=(.*[@$!%*#?&]))[A-Za-z\d@$!%*#?&]{8,20}$"><br>
+            </label> 
+            <label> confirme contraseña:
+                <input type="text" required pattern="#contrasenaUser"><br>
+            </label> 
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label>color favorito:
+                <select>
+                    <option value="colorRojo">Rojo</option>
+                    <option value="colorAzul">Azul</option>
+                    <option value="colorVerde">Verde</option>
+                    <option value="colorAmarillo">Amarillo</option>
+                </select><br>
+            </label>
+            <label>terminos y condiciones
+                <input type="checkbox" name="terminos&condicones" required><br>
+            </label>
+        </fieldset>
+    </form>
+    <button type="submit">enviar formulario</button>
+</div>
+</body>
+</html>
