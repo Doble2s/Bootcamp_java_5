@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .fondo {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="boton">Has clic aqui</button>
+    <script>
+      const boton = document.querySelector("#boton");
+      boton.addEventListener("click", () => {
+        boton.setAttribute("class", " fondo");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body{
+    --inspection_backgroun_color:burlywood;
+    --color_mark: crimson;
+}
+header{
+    margin: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;    
+}
+#headers_links{
+    box-sizing: border-box;
+    height: 0%;
+    display: inline-flex;
+}
+#headers_links>p{
+    margin: 2%;
+    width: 4em;
+}
+#headers_links>button{
+    width: 9em;
+    background-color: aliceblue;
+    border-radius: 7%;
+    border-width: thin;
+}
+#first_section{
+    padding: 10%;
+    padding-left: 35%;
+    padding-right: 35%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F2F2;
+    
+}
+#first_section>button{
+    background-color: black;
+    height: 3em;
+    width: 60%;
+    color: aliceblue;
+}
+#second_section{
+    display: grid;
+    grid-template-areas:    
+        "head head head"
+        "itema itemb itemc";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+.second_section_item{
+    width: 90%;
+    & div{
+        background-color: black;
+        height: 50vh;
+    }
+}
+.second_section_item_head{
+    text-align: center; 
+    grid-area: head;
+    & p{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+.second_section_itema{
+    grid-area: itema;
+}
+.second_section_itemb{
+    grid-area: itemb;
+}
+.second_section_itemc{
+    grid-area: itemc;
+}
+footer{ 
+    background-color: aqua;
+}

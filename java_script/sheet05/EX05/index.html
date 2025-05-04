@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const espera = (ms) => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve();
+          }, ms);
+        });
+      };
+      const cuenta_regresiva = async (params) => {
+        let ms = 1000;
+        for (let i = 3; i >= 0; i--) {
+          await espera(ms);
+          if (i > 0) console.log(`${i}...`);
+          else console.log("!despegue!");
+        }
+        return "despegue exitoso";
+      };
+    </script>
+  </body>
+</html>

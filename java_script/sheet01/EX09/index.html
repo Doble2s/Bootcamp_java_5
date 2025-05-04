@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const lista = [1, 2, 3];
+      const texto =
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores velit est ratione quas quia porro eum quam molestias rem, ad, commodi quibusdam dolore eveniet doloremque saepe debitis tenetur eligendi corrupti?";
+      const invertirarray = (array_entrada) => {
+        const array_invertido = [];
+        const array_prueba = [];
+        array_prueba.unshift(array_entrada);
+        console.log("resultado de la prueba" + array_prueba);
+        let i = 0;
+        console.log("array entrada:" + array_entrada);
+        while (i < array_entrada.length) {
+          array_invertido.unshift(array_entrada[i]);
+          i++;
+        }
+        return array_invertido;
+      };
+      const contar_vocales = (texto_entrada) => {
+        let Exprecion_regular = /a|e|i|o|u/g;
+        const vocales = texto_entrada.match(Exprecion_regular);
+        return vocales.length;
+      };
+    </script>
+  </body>
+</html>

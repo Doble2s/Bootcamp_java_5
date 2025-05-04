@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const persona = {
+        nombre: "Ana",
+        edad: 30,
+        ciudad: "Madrid",
+      };
+      function describirpersona({ nombre = "", edad = "", ciudad = "" }) {
+        console.log(`Nombre: ${nombre}, Edad: ${edad}, Ciudad: ${ciudad}`);
+      }
+    </script>
+  </body>
+</html>

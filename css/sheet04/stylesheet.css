@@ -1,0 +1,132 @@
+body{
+    margin: 0%;
+    background-color: #FFE62C;
+}
+header{
+    margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;        
+    & input{
+        text-align: center;
+        width: 100%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: larger;
+    }
+}
+.aside_oreja{
+    background-color: black;
+    width: 15dvb;
+    height:15dvh;
+}
+#aside_oreja_izquierda{
+    position: fixed;
+    top: 0;
+    left: 0;
+    clip-path: polygon(100% 0, 0 100%, 0 0)
+}
+#aside_oreja_derecha{
+    position: fixed;
+    top: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 100%, 100% 0)
+}
+.aside_moflete{
+    width: 15dvb;
+    height:15dvh;
+    position: fixed;
+    background-color: red;
+}
+#aside_moflete_izquierda{
+    bottom: 0;
+    left: 0;
+    clip-path: circle(100% at 0% 100%);
+}
+#aside_moflete_derecha{
+    bottom: 0;
+    right: 0%;
+    clip-path: circle(100% at 100% 100%);
+}
+main{
+    display: grid;
+    margin: 15%;
+    margin-top: 3%;
+    gap: 8% 5%;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
+}
+
+.ficha_pokemon{
+    display: flex;
+    flex-direction: column;
+    background-color:antiquewhite;
+    width: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    margin: 3%;
+}
+.header_ficha_pokemon{
+    position: relative;
+    margin: 0%;
+    background-color: #DFDFDF;
+}
+.imagen_pokemon{
+    justify-content: start;
+    align-items: start;
+}
+.id_pokemon{
+    margin: 0%;
+    padding: 3%;
+    background-color:lightgrey;
+    position: absolute;
+    color: brown;
+    bottom: 0;
+    left: 0 ;
+}
+.footer_ficha_pokemon{
+    height: 100%;
+}
+.nombre_pokemon{
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: capitalize;
+    font-size: 150%;
+    margin-left: 8%;
+    margin-bottom: 1%;
+}
+.tipo_primario{
+    margin-left: 8%;
+}
+.tipo{
+    color: brown;
+    display: inline-flex;
+    border-width: thin;
+    border-style: solid;
+    border-color: lightgrey;
+    text-transform:uppercase;
+    font-size: 70%;
+    border-radius: 10%;
+    padding: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 1%;
+}
+.inicial{
+    display: none;
+}
+.evolucion_pokemon{
+    margin-left: 8%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-left: 2%;
+    font-size: 100%;
+    border-left: 4px solid brown;
+    color: brown;
+}
+.pokemon_predecesor{
+    color: black;
+    font-size: 200%;
+}

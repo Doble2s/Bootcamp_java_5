@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nombre = "ana";
+      const loginUsuario = (usuario) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(
+            () => (usuario != "" ? resolve(usuario) : reject("")),
+            1000
+          );
+        });
+      };
+      const obtenerPerfil = (usuario) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (usuario != "") {
+              let nombre = usuario,
+                rol = "admin";
+              resolve([nombre, rol]);
+            } else {
+              reject("");
+            }
+          }, 1000);
+        });
+      };
+      const mostrarDashBoard = (perfil) => {
+        return new Promise((resolve, reject) => {
+          if (perfil != "") {
+            resolve(perfil);
+          } else {
+            reject("datos de usuario nulos");
+          }
+        });
+      };
+      loginUsuario(nombre)
+        .then((resolve) => {
+          console.log("1. " + resolve);
+          return obtenerPerfil(resolve);
+        })
+        .then((resolve) => {
+          console.log(`2. nombre ${resolve[0]}, rol:${resolve[1]}`);
+          return mostrarDashBoard(resolve);
+        })
+        .then((resolve) => {
+          console.log(`3. bienbenida ${resolve[0]}(${resolve[1]})`);
+        });
+    </script>
+  </body>
+</html>

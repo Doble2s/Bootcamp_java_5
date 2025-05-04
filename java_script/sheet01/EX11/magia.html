@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        text-align: center;
+        align-content: center;
+        height: 200px;
+        width: 200px;
+      }
+      .backgrounthemeblue {
+        background-color: aqua;
+      }
+      .backgrounthemered {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container backgrounthemeblue">
+      <p>Hola a todos.</p>
+    </div>
+    <script>
+      const element = document.querySelector(".backgrounthemeblue");
+      element.addEventListener("mouseover", () => {
+        element.classList.replace("backgrounthemeblue", "backgrounthemered");
+      });
+      element.addEventListener("mouseout", () => {
+        element.classList.replace("backgrounthemered", "backgrounthemeblue");
+      });
+    </script>
+  </body>
+</html>

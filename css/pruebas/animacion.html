@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #cuerpo {
+        background-color: rgb(181, 118, 240);
+        width: 10em;
+        animation: revote 2s infinite 0s;
+      }
+      @keyframes revote {
+        15% {
+          transform: translate(10px, 100px);
+        }
+        40% {
+          transform: translate(25px, 50px);
+        }
+        60% {
+          transform: translate(40px, 100px);
+        }
+        75% {
+          transform: translate(50px, 80px);
+        }
+        100% {
+          transform: translate(70px, 100px);
+        }
+      }
+    </style>
+    <h1>Titulo</h1>
+    <div>
+      <p id="cuerpo">esto es un texto</p>
+    </div>
+  </body>
+</html>
